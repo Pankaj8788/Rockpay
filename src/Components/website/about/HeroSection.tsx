@@ -1,5 +1,7 @@
 import React from "react";
 import { aboutImg1 } from "../../../Assets/about";
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
     <section className="w-full bg-white py-12">
@@ -23,9 +25,11 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="w-full h-44">
-          <img
+          <Image
             src={aboutImg1.src}
             alt=""
+            width={50}
+            height={50}
             className="w-full h-full object-contain"
           />
         </div>

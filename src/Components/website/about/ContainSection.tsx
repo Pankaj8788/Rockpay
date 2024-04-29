@@ -1,5 +1,6 @@
 import { containArr } from "@/src/utils/website/home";
 import React from "react";
+import Image from "next/image";
 
 export default function ContainSection() {
   return (
@@ -30,7 +31,7 @@ export default function ContainSection() {
             className="w-full flex items-center justify-start gap-4 border-r-2 border-r-black pr-8"
             key={item.id}
           >
-            <img src={item.img.src} alt="" />
+            <Image src={item.img.src} alt="" width={50} height={50} />
             <span>
               <p className="font-bold">{item.title1}</p>
               <p className="font-bold text-themeColor">{item.title2}</p>

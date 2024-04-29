@@ -1,5 +1,6 @@
 import React from "react";
 import { breadCrumb1, breadCrumb2 } from "@/src/Assets/about";
+import Image from "next/image";
 
 export default function Breadcrumb() {
   return (
@@ -19,7 +20,13 @@ export default function Breadcrumb() {
         </p>
       </div>
       <div className="w-full flex items-center justify-end">
-        <img src={breadCrumb1.src} alt="" className="h-[35em] w-auto" />
+        <Image
+          src={breadCrumb1.src}
+          alt=""
+          height={350}
+          width={350}
+          className="h-[35em] w-auto"
+        />
       </div>
     </section>
   );

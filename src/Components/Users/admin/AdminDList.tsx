@@ -1,9 +1,3 @@
-// import React from "react";
-
-// export default function AdminDList() {
-//   return <div>AdminDList</div>;
-// }
-
 import React, { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
 import {
@@ -21,7 +15,6 @@ import Swal from "sweetalert2";
 
 export default function AdminDList() {
   const [data, setData] = useState<any>([]);
-  // const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,14 +25,12 @@ export default function AdminDList() {
           Authorization: token,
         };
         const response = await axios.get(
-          // "http://api.ipaisa.site/api/auth/adminds",
           "http://localhost:5000/api/auth/adminds",
           {
             headers: headers,
           }
         );
         setData(response.data);
-        // setData(response.data.user);
         console.log(response.data);
       } catch (error) {
         console.log(error);
@@ -48,6 +39,7 @@ export default function AdminDList() {
 
     fetchData();
   }, []);
+
   const handleDelete = async (itemId: any) => {
     try {
       const token = localStorage.getItem("jwt");
@@ -56,7 +48,6 @@ export default function AdminDList() {
         Authorization: token,
       };
       await axios.delete(
-        // `http://localhost:8080/api/delete/superdistributor/${itemId}`,
         `http://localhost:5000/api/protected/delete/${itemId}`,
         {
           headers: headers,
@@ -72,6 +63,7 @@ export default function AdminDList() {
       text: "Item deleted successfully",
     });
   };
+
   const handleEdit = async (itemId: any) => {
     try {
       const token = localStorage.getItem("jwt");
@@ -95,6 +87,7 @@ export default function AdminDList() {
       text: "Item updated successfully",
     });
   };
+
   return (
     <section className="main container w-full flex flex-col !gap-6 my-8 h-[calc(100vh-9rem)]">
       <div className="w-full flex justify-start items-center gap-12">
@@ -161,12 +154,12 @@ export default function AdminDList() {
       </div>
 
       <div className="">
-        <p className="text-black font-bold">Registered Channal Partner</p>
+        <p className="text-black font-bold">Registered Channel Partner</p>
       </div>
 
       <div className="w-full flex flex-col items-start justify-start mt-8">
         <TableContainer component={Paper}>
-          <Table aria-label="Registered Channal partner">
+          <Table aria-label="Registered Channel Partner">
             <TableHead>
               <TableRow>
                 <TableCell>Sl No.</TableCell>
@@ -177,9 +170,6 @@ export default function AdminDList() {
                 <TableCell>Adhar number</TableCell>
                 <TableCell>Gstin</TableCell>
                 <TableCell>Date Of Birth</TableCell>
-                <TableCell>Pancard Number</TableCell>
-                <TableCell>Bank Account Number</TableCell>
-                <TableCell>IFSC</TableCell>
                 <TableCell>Email</TableCell>
                 <TableCell>Mobile Number</TableCell>
                 <TableCell>Alternate Number</TableCell>
@@ -194,60 +184,55 @@ export default function AdminDList() {
                 <TableCell>Action</TableCell>
               </TableRow>
             </TableHead>
-            {data.map((item: any, index: number) => (
-              <TableBody>
-                <TableCell>{index + 1}</TableCell>
-                <TableCell>{item.user_id}</TableCell>
-                <TableCell>{item.parent_id}</TableCell>
-
-                <TableCell>
-                  {" "}
-                  {item.name + " " + item.middle_name + " " + item.last_name}
-                </TableCell>
-                <TableCell>{item.outlet_name}</TableCell>
-                <TableCell>{item.aadharcard_number}</TableCell>
-                <TableCell>{item.gstin}</TableCell>
-                <TableCell>{item.date_of_birth}</TableCell>
-                <TableCell>{item.pancard_number}</TableCell>
-                <TableCell>{item.bank_account_number}</TableCell>
-                <TableCell>{item.ifsc}</TableCell>
-                <TableCell>{item.email}</TableCell>
-                <TableCell>{item.mobile_number}</TableCell>
-                <TableCell>{item.alternate_number}</TableCell>
-                <TableCell>{item.state}</TableCell>
-                <TableCell>{item.district}</TableCell>
-                <TableCell>{item.city}</TableCell>
-                <TableCell>{item.pin_code}</TableCell>
-                <TableCell>{item.address}</TableCell>
-                <TableCell>{item.created_at}</TableCell>
-                <TableCell>{item.user_Type}</TableCell>
-                <TableCell>Active</TableCell>
-
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => {
-                      handleEdit(item.id);
-                    }}
-                  >
-                    Edit
-                  </Button>
-                </TableCell>
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    onClick={() => {
-                      // handleDelete(item.id);
-                      handleDelete(item.user_id);
-                    }}
-                  >
-                    Delete
-                  </Button>
-                </TableCell>
-              </TableBody>
-            ))}
+            <TableBody>
+              {data.map((item: any, index: number) => (
+                <TableRow key={item.user_id}>
+                  <TableCell>{index + 1}</TableCell>
+                  <TableCell>{item.user_id}</TableCell>
+                  <TableCell>{item.parent_id}</TableCell>
+                  <TableCell>
+                    {item.name} {item.middle_name} {item.last_name}
+                  </TableCell>
+                  <TableCell>{item.outlet_name}</TableCell>
+                  <TableCell>{item.aadharcard_number}</TableCell>
+                  <TableCell>{item.gstin}</TableCell>
+                  <TableCell>{item.date_of_birth}</TableCell>
+                  <TableCell>{item.email}</TableCell>
+                  <TableCell>{item.mobile_number}</TableCell>
+                  <TableCell>{item.alternate_number}</TableCell>
+                  <TableCell>{item.state}</TableCell>
+                  <TableCell>{item.district}</TableCell>
+                  <TableCell>{item.city}</TableCell>
+                  <TableCell>{item.pin_code}</TableCell>
+                  <TableCell>{item.address}</TableCell>
+                  <TableCell>{item.created_at}</TableCell>
+                  <TableCell>{item.user_Type}</TableCell>
+                  <TableCell>Active</TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => {
+                        handleEdit(item.id);
+                      }}
+                    >
+                      Edit
+                    </Button>
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={() => {
+                        handleDelete(item.user_id);
+                      }}
+                    >
+                      Delete
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
       </div>

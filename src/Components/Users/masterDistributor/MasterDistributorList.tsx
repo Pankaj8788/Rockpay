@@ -162,7 +162,7 @@ export default function MasterDistributorList() {
 
       <div className="w-full flex flex-col items-start justify-start mt-8">
         <TableContainer component={Paper}>
-          <Table aria-label="Registered Channal partner">
+          <Table aria-label="Registered Channel partner">
             <TableHead>
               <TableRow>
                 <TableCell>Sl No.</TableCell>
@@ -173,9 +173,9 @@ export default function MasterDistributorList() {
                 <TableCell>Adhar number</TableCell>
                 <TableCell>Gstin</TableCell>
                 <TableCell>Date Of Birth</TableCell>
-                <TableCell>Pancard Number</TableCell>
-                <TableCell>Bank Account Number</TableCell>
-                <TableCell>IFSC</TableCell>
+                {/* <TableCell>Pancard Number</TableCell> */}
+                {/* <TableCell>Bank Account Number</TableCell> */}
+                {/* <TableCell>IFSC</TableCell> */}
                 <TableCell>Email</TableCell>
                 <TableCell>Mobile Number</TableCell>
                 <TableCell>Alternate Number</TableCell>
@@ -190,60 +190,61 @@ export default function MasterDistributorList() {
                 <TableCell>Action</TableCell>
               </TableRow>
             </TableHead>
-            {data.map((item: any, index: number) => (
-              <TableBody>
-                <TableCell>{index + 1}</TableCell>
-                <TableCell>{item.user_id}</TableCell>
-                <TableCell>{item.parent_id}</TableCell>
+            <TableBody>
+              {data.map((item: any, index: number) => (
+                <TableRow key={item.id}>
+                  <TableCell>{index + 1}</TableCell>
+                  <TableCell>{item.user_id}</TableCell>
+                  <TableCell>{item.parent_id}</TableCell>
 
-                <TableCell>
-                  {" "}
-                  {item.name + " " + item.middle_name + " " + item.last_name}
-                </TableCell>
-                <TableCell>{item.outlet_name}</TableCell>
-                <TableCell>{item.aadharcard_number}</TableCell>
-                <TableCell>{item.gstin}</TableCell>
-                <TableCell>{item.date_of_birth}</TableCell>
-                <TableCell>{item.pancard_number}</TableCell>
-                <TableCell>{item.bank_account_number}</TableCell>
-                <TableCell>{item.ifsc}</TableCell>
-                <TableCell>{item.email}</TableCell>
-                <TableCell>{item.mobile_number}</TableCell>
-                <TableCell>{item.alternate_number}</TableCell>
-                <TableCell>{item.state}</TableCell>
-                <TableCell>{item.district}</TableCell>
-                <TableCell>{item.city}</TableCell>
-                <TableCell>{item.pin_code}</TableCell>
-                <TableCell>{item.address}</TableCell>
-                <TableCell>{item.created_at}</TableCell>
-                <TableCell>{item.user_Type}</TableCell>
-                <TableCell>Active</TableCell>
+                  <TableCell>
+                    {" "}
+                    {item.name + " " + item.middle_name + " " + item.last_name}
+                  </TableCell>
+                  <TableCell>{item.outlet_name}</TableCell>
+                  <TableCell>{item.aadharcard_number}</TableCell>
+                  <TableCell>{item.gstin}</TableCell>
+                  <TableCell>{item.date_of_birth}</TableCell>
+                  {/* <TableCell>{item.pancard_number}</TableCell> */}
+                  {/* <TableCell>{item.bank_account_number}</TableCell> */}
+                  {/* <TableCell>{item.ifsc}</TableCell> */}
+                  <TableCell>{item.email}</TableCell>
+                  <TableCell>{item.mobile_number}</TableCell>
+                  <TableCell>{item.alternate_number}</TableCell>
+                  <TableCell>{item.state}</TableCell>
+                  <TableCell>{item.district}</TableCell>
+                  <TableCell>{item.city}</TableCell>
+                  <TableCell>{item.pin_code}</TableCell>
+                  <TableCell>{item.address}</TableCell>
+                  <TableCell>{item.created_at}</TableCell>
+                  <TableCell>{item.user_Type}</TableCell>
+                  <TableCell>Active</TableCell>
 
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => {
-                      handleEdit(item.id);
-                    }}
-                  >
-                    Edit
-                  </Button>
-                </TableCell>
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    onClick={() => {
-                      // handleDelete(item.id);
-                      handleDelete(item.user_id);
-                    }}
-                  >
-                    Delete
-                  </Button>
-                </TableCell>
-              </TableBody>
-            ))}
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => {
+                        handleEdit(item.id);
+                      }}
+                    >
+                      Edit
+                    </Button>
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={() => {
+                        handleDelete(item.user_id);
+                      }}
+                    >
+                      Delete
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
       </div>

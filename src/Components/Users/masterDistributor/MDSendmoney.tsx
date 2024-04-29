@@ -17,7 +17,7 @@ const MDSendmoney = () => {
       const token = localStorage.getItem("jwt");
 
       const response = await axios.post(
-        "http://api.ipaisa.site/api/transfer",
+        "http://localhost:5000/api/transfer",
         formData,
         {
           headers: {

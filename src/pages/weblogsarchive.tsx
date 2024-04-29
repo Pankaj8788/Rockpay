@@ -9,7 +9,7 @@ const data = {
   subTitle: "Logs Archive",
   message: "hello admin",
 };
-export default function () {
+export default function weblogsarchive() {
   return (
     <MainLayout>
       <AdminHeader data={data} />

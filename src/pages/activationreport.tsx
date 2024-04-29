@@ -9,7 +9,7 @@ const data = {
   subTitle: "New Activations Report",
   message: "Hello,Admin",
 };
-export default function () {
+export default function activationreport() {
   return (
     <div>
       <MainLayout>

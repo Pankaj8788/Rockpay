@@ -1,11 +1,3 @@
-// import React from "react";
-
-// export default function AdminAddcp() {
-//   return (
-
-//   );
-// }
-
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -45,7 +37,7 @@ function AdminAddcp() {
     try {
       const token = localStorage.getItem("jwt");
       const response = await axios.post(
-        "http://api.ipaisa.site/api/auth/register",
+        "http://localhost:5000/api/auth/register",
         userData,
         {
           headers: {
@@ -97,7 +89,7 @@ function AdminAddcp() {
       <section className="gap-4 main-container bg-white ">
         <p className="font-bold text-lg">Create New User</p>
         <form onSubmit={handleSubmit} className="flex">
-          <div className="flex mt-4 w-full shadow-2xl">
+          <div className="flex mt-4 w-full">
             <span className="">
               <div className="mt-2 flex flex-col ">
                 <p className="font-medium text-md mb-2">Name:</p>
@@ -110,26 +102,6 @@ function AdminAddcp() {
                 />
               </div>
               <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Middle Name:</p>
-                <input
-                  type="text"
-                  name="middleName"
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                  value={userData.middleName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Last Name:</p>
-                <input
-                  type="text"
-                  name="lastName"
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                  value={userData.lastName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
                 <p className="font-medium text-md mb-2">Date Of Birth:</p>
                 <input
                   type="Date"
@@ -137,81 +109,6 @@ function AdminAddcp() {
                   className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
                   value={userData.dateOfBirth}
                   onChange={handleChange}
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Email:</p>
-                <input
-                  type="email"
-                  name="email"
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                  value={userData.email}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Password:</p>
-                <input
-                  type="password"
-                  name="password"
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                  value={userData.password}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">User Type:</p>
-
-                <select
-                  name="user_Type"
-                  value={userData.user_Type}
-                  onChange={handleChange}
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                >
-                  <option value="">Select User Type</option>
-                  <option value="Channel_Partner">Channel Partner</option>
-                </select>
-              </div>
-              <button
-                type="submit"
-                className="px-4 py-3 bg-themeColor rounded-md text-white center mt-8"
-              >
-                Create User
-              </button>
-            </span>
-            <span className="ml-8">
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Category:</p>
-                <select
-                  name="category"
-                  value={userData.category}
-                  onChange={handleChange}
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                >
-                  <option value="">Select Category</option>
-                  <option value="Fixed">Fixed</option>
-                  <option value="Variable">Variable</option>
-                </select>
-              </div>
-
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Mobile Number:</p>
-                <input
-                  type="number"
-                  name="mobileNumber"
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                  value={userData.mobileNumber}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Alternate Number:</p>
-                <input
-                  type="number"
-                  name="alternateNumber"
-                  value={userData.alternateNumber}
-                  onChange={handleChange}
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
                 />
               </div>
               <div className="mt-2 flex flex-col">
@@ -235,6 +132,16 @@ function AdminAddcp() {
                 />
               </div>
               <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">District:</p>
+                <input
+                  type="text"
+                  name="district"
+                  value={userData.district}
+                  onChange={handleChange}
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                />
+              </div>
+              <div className="mt-2 flex flex-col">
                 <p className="font-medium text-md mb-2">Gstin:</p>
                 <input
                   type="text"
@@ -245,27 +152,47 @@ function AdminAddcp() {
                 />
               </div>
 
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Bank Account Number:</p>
-                <input
-                  type="number"
-                  name="bankAccountNumber"
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                  value={userData.bankAccountNumber}
-                  onChange={handleChange}
-                />
-              </div>
+              <button
+                type="submit"
+                className="px-4 py-3 bg-themeColor rounded-md text-white center mt-8"
+              >
+                Create User
+              </button>
             </span>
             <span className="ml-8">
               <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">IfSC:</p>
+                <p className="font-medium text-md mb-2">Middle Name:</p>
                 <input
                   type="text"
-                  name="ifsc"
-                  value={userData.ifsc}
+                  name="middleName"
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                  value={userData.middleName}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">Mobile Number:</p>
+                <input
+                  type="number"
+                  name="mobileNumber"
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                  value={userData.mobileNumber}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">User Type:</p>
+
+                <select
+                  name="user_Type"
+                  value={userData.user_Type}
                   onChange={handleChange}
                   className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                />
+                >
+                  <option value="">Select User Type</option>
+                  <option value="Channel_Partner">Channel Partner</option>
+                </select>
               </div>
               <div className="mt-2 flex flex-col">
                 <p className="font-medium text-md mb-2">Address:</p>
@@ -273,26 +200,6 @@ function AdminAddcp() {
                   type="text"
                   name="address"
                   value={userData.address}
-                  onChange={handleChange}
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">Pincode:</p>
-                <input
-                  type="number"
-                  name="pincode"
-                  value={userData.pincode}
-                  onChange={handleChange}
-                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
-                />
-              </div>
-              <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">District:</p>
-                <input
-                  type="text"
-                  name="district"
-                  value={userData.district}
                   onChange={handleChange}
                   className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
                 />
@@ -308,6 +215,61 @@ function AdminAddcp() {
                 />
               </div>
               <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">Email:</p>
+                <input
+                  type="email"
+                  name="email"
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                  value={userData.email}
+                  onChange={handleChange}
+                />
+              </div>
+            </span>
+            <span className="ml-8">
+              <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">Last Name:</p>
+                <input
+                  type="text"
+                  name="lastName"
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                  value={userData.lastName}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">Alternate Number:</p>
+                <input
+                  type="number"
+                  name="alternateNumber"
+                  value={userData.alternateNumber}
+                  onChange={handleChange}
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                />
+              </div>
+              <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">Category:</p>
+                <select
+                  name="category"
+                  value={userData.category}
+                  onChange={handleChange}
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                >
+                  <option value="">Select Category</option>
+                  <option value="Fixed">Fixed</option>
+                  <option value="Variable">Variable</option>
+                </select>
+              </div>
+              <div className="mt-2 flex flex-col">
+                <p className="font-medium text-md mb-2">Pincode:</p>
+                <input
+                  type="number"
+                  name="pincode"
+                  value={userData.pincode}
+                  onChange={handleChange}
+                  className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                />
+              </div>
+              <div className="mt-2 flex flex-col">
                 <p className="font-medium text-md mb-2">City:</p>
                 <input
                   type="text"
@@ -317,24 +279,17 @@ function AdminAddcp() {
                   className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
                 />
               </div>
-
               <div className="mt-2 flex flex-col">
-                <p className="font-medium text-md mb-2">PancardNumber:</p>
+                <p className="font-medium text-md mb-2">Password:</p>
                 <input
-                  type="number"
-                  name="pancardNumber"
-                  value={userData.pancardNumber}
-                  onChange={handleChange}
+                  type="password"
+                  name="password"
                   className=" h-10 w-full bg-white rounded-md  border-2 border-gray-400"
+                  value={userData.password}
+                  onChange={handleChange}
                 />
               </div>
             </span>
-          </div>
-          <div className="justify-start">
-            <div>
-              <p>Upload documents</p>
-              <TextField name="file" type="file" className="mt-2" />
-            </div>
           </div>
         </form>
       </section>

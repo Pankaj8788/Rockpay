@@ -1,5 +1,6 @@
 import React from "react";
 import { servicesbreadcrumb } from "@/src/Assets/services";
+import Image from "next/image";
 
 export default function BreadCrumb() {
   return (
@@ -19,9 +20,11 @@ export default function BreadCrumb() {
         </p>
       </div>
       <div className="w-full flex items-center justify-end">
-        <img
+        <Image
           src={servicesbreadcrumb.src}
           alt=""
+          width={500} // Adjust width as needed
+          height={350} // Adjust height as needed
           className="h-[35em] w-auto  !duration-500 !ease-in-out hover:scale-105 active:scale-95"
         />
       </div>

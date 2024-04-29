@@ -1,5 +1,6 @@
 import React from "react";
 import { Contactus1 } from "@/src/Assets/contactus";
+import Image from "next/image";
 
 export default function HomeContact() {
   return (
@@ -19,9 +20,11 @@ export default function HomeContact() {
           </span>
         </div>
         <div className="w-full center  ">
-          <img
+          <Image
             src={Contactus1.src}
             alt=""
+            width={500}
+            height={500}
             className="group-hover:scale-110 !transition-all !duration-700 !ease-in-out mb-4"
           />
         </div>

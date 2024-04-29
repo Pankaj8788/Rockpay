@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { login } from "../../redux/actions/authActions";
 import Swal from "sweetalert2";
+import Image from "next/image";
 
 export const LoginPage = () => {
   const dispatch = useDispatch();
@@ -84,9 +85,11 @@ export const LoginPage = () => {
               For All Your Payments
             </p>
           </span>
-          <img
+          <Image
             src={breadcrumimg.src}
             alt=""
+            width={800} // Example width
+            height={600}
             className="h-[70vh] w-auto object-contain "
           />
         </div>
@@ -102,9 +105,11 @@ export const LoginPage = () => {
                 </p>
               </span>
               <span className="w-full flex justify-end">
-                <img
+                <Image
                   src={MainLogo.src}
                   alt=""
+                  width={800}
+                  height={600}
                   className=" w-20 h-20 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-full"
                 />
               </span>

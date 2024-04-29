@@ -1,4 +1,6 @@
 export { default as mobscreen } from "./mobscreen.gif";
+export { default as rockpaylotty } from "./rockpaylotty.gif";
+
 export { default as imockup1 } from "./imockup1.png";
 export { default as imockup2 } from "./imockup2.png";
 export { default as imockup3 } from "./imockup3.png";

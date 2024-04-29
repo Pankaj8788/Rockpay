@@ -9,7 +9,7 @@ const data = {
   subTitle: "Refund Requests",
   message: "Hello,Admin",
 };
-export default function () {
+export default function complainthistory() {
   return (
     <MainLayout>
       <AdminHeader data={data} />

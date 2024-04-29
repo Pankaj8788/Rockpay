@@ -13,13 +13,13 @@ export default function HomeCareer() {
           Career in iPAisa offers an exciting opportunity to join a dynamic team
           dedicated to revolutionizing financial and payment services. Our
           vision is to deliver seamless financial software and payment
-          application services, prioritizing user convenience. We're committed
-          to bridging market demands with innovative solutions and contributing
-          to national digitalization. As an employee, you'll be part of a
-          mission-driven organization that values growth, innovation, and
-          societal progress. Join us if you're passionate, ambitious, and ready
-          to make a meaningful impact. Explore various roles and grow with us as
-          we shape the future of finance together.
+          application services, prioritizing user convenience. We&apos;re
+          committed to bridging market demands with innovative solutions and
+          contributing to national digitalization. As an employee, you&apos;ll
+          be part of a mission-driven organization that values growth,
+          innovation, and societal progress. Join us if you&apos;re passionate,
+          ambitious, and ready to make a meaningful impact. Explore various
+          roles and grow with us as we shape the future of finance together.
         </p>
       </div>
       <form className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 px-10 py-10 shadow-2xl mb-2">

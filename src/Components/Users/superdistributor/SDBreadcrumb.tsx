@@ -1,6 +1,7 @@
 import { adminImg } from "@/src/Assets/admin";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function SDBreadcrumb() {
   const [data, setData] = useState<any>();
@@ -29,7 +30,7 @@ export default function SDBreadcrumb() {
     };
 
     fetchData();
-  }, []);
+  }, [data]);
   return (
     <section className="w-full main-container h-full flex flex-col items-start justify-start gap-4 mb-8">
       <div className="w-full h-[70%] flex items-center justify-between gap-4 ">
@@ -43,7 +44,13 @@ export default function SDBreadcrumb() {
         </div>
       </div>
       <div className="w-full h-full rounded-3xl overflow-hidden shadow-[0_10px_20px_rgba(00,00,00)]">
-        <img src={adminImg.src} alt="" className="w-full h-full object-fill" />
+        <Image
+          src={adminImg.src}
+          alt=""
+          width={500}
+          height={500}
+          className="w-full h-full object-fill"
+        />
       </div>
     </section>
   );

@@ -1,13 +1,16 @@
 import React from "react";
 import { serviceInsuarance } from "@/src/Assets/services";
+import Image from "next/image";
 
 export default function InsuaranceServices() {
   return (
     <section className="w-full main-container flex  bg-[#E0E8FF]">
       <div className="w-full flex items-center justify-start">
-        <img
+        <Image
           src={serviceInsuarance.src}
           alt=""
+          width={500} // Adjust width as needed
+          height={350} // Adjust height as needed
           className="h-[35em] w-auto mb-4  !duration-500 !ease-in-out hover:scale-105 active:scale-95"
         />
       </div>

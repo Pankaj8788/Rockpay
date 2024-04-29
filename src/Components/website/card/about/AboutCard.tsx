@@ -1,5 +1,6 @@
 import React from "react";
 import { aboutSection1 } from "@/src/Assets/about";
+import Image from "next/image";
 
 export default function AboutCard() {
   return (
@@ -19,9 +20,11 @@ export default function AboutCard() {
         </div>
       </div>
       <div className="w-full h-full overflow-hidden">
-        <img
+        <Image
           src={aboutSection1.src}
           alt=""
+          width={500} // Specify the width here
+          height={500} // Specify the height here
           className="w-full h-full object-cover"
         />
       </div>

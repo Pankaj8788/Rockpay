@@ -1,5 +1,6 @@
 import React from "react";
 import { aboutSection11, aboutSection22 } from "@/src/Assets/aboutus2";
+import Image from "next/image";
 
 export default function ContainSection() {
   return (
@@ -19,9 +20,11 @@ export default function ContainSection() {
           </div>
         </div>
         <div className="w-full lg:w-1/2 h-full overflow-hidden">
-          <img
+          <Image
             src={aboutSection11.src}
             alt=""
+            width={500} // Specify the width here
+            height={500} // Specify the height here
             className="w-full h-full object-cover bg-black"
           />
         </div>
@@ -42,9 +45,11 @@ export default function ContainSection() {
           </div>
         </div>
         <div className="w-full lg:w-1/2 h-full overflow-hidden">
-          <img
+          <Image
             src={aboutSection22.src}
             alt=""
+            width={500} // Specify the width here
+            height={500} // Specify the height here
             className="w-full h-full object-cover bg-black"
           />
         </div>

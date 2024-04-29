@@ -266,7 +266,7 @@ export default function TransactionHistWithParent() {
           export
         </button>
       </div>
-      <span className="w-full h-[1px] bg-gray-800"></span>
+      {/* <span className="w-full h-[1px] bg-gray-800"></span>
       <div>
         <div>
           <p className="font-bold capitalize">apply action</p>
@@ -302,7 +302,7 @@ export default function TransactionHistWithParent() {
             send
           </button>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

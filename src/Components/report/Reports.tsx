@@ -17,7 +17,9 @@ export default function Reports() {
         apiUrl = `http://localhost:5000/api/protected/adminalltransactions`;
       } else if (transactionType === "transactions") {
         // apiUrl = `http://localhost:5000/api/protected/adminalltransactions`;
+        apiUrl = `http://localhost:5000/api/get/paymenttransaction`;
       }
+      console.log(transactionType);
       const response = await axios.get(apiUrl);
       setTransactions(response.data);
     } catch (error) {
@@ -255,6 +257,7 @@ export default function Reports() {
   );
 }
 
+//.....................
 // import React, { useState } from "react";
 // import { TextField, Button } from "@mui/material";
 // import SearchIcon from "@mui/icons-material/Search";
@@ -496,7 +499,7 @@ export default function Reports() {
 //   );
 // }
 
-////..........transaction
+//..........transaction
 // import React, { useState } from "react";
 // import { TextField, Button } from "@mui/material";
 // import SearchIcon from "@mui/icons-material/Search";
@@ -512,9 +515,10 @@ export default function Reports() {
 //     try {
 //       let apiUrl = "";
 //       if (transactionType === "wallet") {
-//         apiUrl = `http://localhost:8080/api/ftrans?startDate=${fromDate}&endDate=${toDate}`;
+//         apiUrl = `http://localhost:5000/api/ftrans?startDate=${fromDate}&endDate=${toDate}`;
+//         // apiUrl = `http://localhost:5000/api/protected/adminalltransactions`;
 //       } else if (transactionType === "transactions") {
-//         apiUrl = `http://localhost:8080/api/all`;
+//         apiUrl = `http://localhost:5000/api/all`;
 //       }
 //       const response = await axios.get(apiUrl);
 //       setTransactions(response.data);

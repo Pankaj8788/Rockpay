@@ -13,7 +13,6 @@ import {
   Paper,
   Button,
 } from "@mui/material";
-import MaterialTable from "material-table";
 
 export default function RetailersList() {
   // const [data, setData] = useState<any>([]);
@@ -163,92 +162,89 @@ export default function RetailersList() {
 
       <div className="w-full flex flex-col items-start justify-start mt-8">
         <TableContainer component={Paper}>
-          <Table aria-label="Registered Channal partner">
+          <Table aria-label="Registered Channel partner">
             <TableHead>
               <TableRow>
                 <TableCell>Sl No.</TableCell>
-                <TableCell>User ID</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell>Email</TableCell>
-                <TableCell>Password</TableCell>
-                <TableCell>User Type</TableCell>
+                <TableCell>User Id</TableCell>
                 <TableCell>Parent ID</TableCell>
-                <TableCell>Balance</TableCell>
-                <TableCell>Created At</TableCell>
-                <TableCell>Category</TableCell>
-                <TableCell>Mobile Number</TableCell>
+                <TableCell>Name</TableCell>
                 <TableCell>Outlet Name</TableCell>
-                <TableCell>Aadharcard Number</TableCell>
-                <TableCell>GSTIN</TableCell>
+                <TableCell>Adhar number</TableCell>
+                <TableCell>Gstin</TableCell>
                 <TableCell>Date Of Birth</TableCell>
-                <TableCell>Bank Account Number</TableCell>
-                <TableCell>IFSC</TableCell>
-                <TableCell>Address</TableCell>
-                <TableCell>PIN code</TableCell>
-                <TableCell>District</TableCell>
-                <TableCell>State</TableCell>
-                <TableCell>City</TableCell>
+                {/* <TableCell>Pancard Number</TableCell> */}
+                {/* <TableCell>Bank Account Number</TableCell> */}
+                {/* <TableCell>IFSC</TableCell> */}
+                <TableCell>Email</TableCell>
+                <TableCell>Mobile Number</TableCell>
                 <TableCell>Alternate Number</TableCell>
-                <TableCell>Pancard Number</TableCell>
+                <TableCell>State</TableCell>
+                <TableCell>District</TableCell>
+                <TableCell>City</TableCell>
+                <TableCell>PIN code</TableCell>
+                <TableCell>Address</TableCell>
+                <TableCell>Creted Date</TableCell>
+                <TableCell>User Type</TableCell>
                 <TableCell>Status</TableCell>
+                <TableCell>Action</TableCell>
               </TableRow>
             </TableHead>
-            {data.map((item: any, index: number) => (
-              <TableBody>
-                <TableCell>{index + 1}</TableCell>
-                <TableCell>{item.user_id}</TableCell>
-                <TableCell>
-                  {" "}
-                  {item.name + " " + item.middle_name + " " + item.last_name}
-                </TableCell>
-                <TableCell>{item.email}</TableCell>
-                <TableCell>{item.password}</TableCell>
-                <TableCell>{item.user_Type}</TableCell>
-                <TableCell>{item.parent_id}</TableCell>
-                <TableCell>{item.balance}</TableCell>
-                <TableCell>{item.created_at}</TableCell>
-                <TableCell>{item.category}</TableCell>
-                <TableCell>{item.mobile_number}</TableCell>
-                <TableCell>{item.outlet_name}</TableCell>
-                <TableCell>{item.aadharcard_number}</TableCell>
-                <TableCell>{item.gstin}</TableCell>
-                <TableCell>{item.date_of_birth}</TableCell>
-                <TableCell>{item.bank_account_number}</TableCell>
-                <TableCell>{item.ifsc}</TableCell>
-                <TableCell>{item.address}</TableCell>
-                <TableCell>{item.pincode}</TableCell>
-                <TableCell>{item.district}</TableCell>
-                <TableCell>{item.state}</TableCell>
-                <TableCell>{item.city}</TableCell>
-                <TableCell>{item.alternate_number}</TableCell>
-                <TableCell>{item.pancard_number}</TableCell>
-                <TableCell>{item.status}</TableCell>
+            <TableBody>
+              {data.map((item: any, index: number) => (
+                <TableRow key={item.id}>
+                  <TableCell>{index + 1}</TableCell>
+                  <TableCell>{item.user_id}</TableCell>
+                  <TableCell>{item.parent_id}</TableCell>
 
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => {
-                      handleEdit(item.id);
-                    }}
-                  >
-                    Edit
-                  </Button>
-                </TableCell>
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    onClick={() => {
-                      // handleDelete(item.id);
-                      handleDelete(item.user_id);
-                    }}
-                  >
-                    Delete
-                  </Button>
-                </TableCell>
-              </TableBody>
-            ))}
+                  <TableCell>
+                    {" "}
+                    {item.name + " " + item.middle_name + " " + item.last_name}
+                  </TableCell>
+                  <TableCell>{item.outlet_name}</TableCell>
+                  <TableCell>{item.aadharcard_number}</TableCell>
+                  <TableCell>{item.gstin}</TableCell>
+                  <TableCell>{item.date_of_birth}</TableCell>
+                  {/* <TableCell>{item.pancard_number}</TableCell> */}
+                  {/* <TableCell>{item.bank_account_number}</TableCell> */}
+                  {/* <TableCell>{item.ifsc}</TableCell> */}
+                  <TableCell>{item.email}</TableCell>
+                  <TableCell>{item.mobile_number}</TableCell>
+                  <TableCell>{item.alternate_number}</TableCell>
+                  <TableCell>{item.state}</TableCell>
+                  <TableCell>{item.district}</TableCell>
+                  <TableCell>{item.city}</TableCell>
+                  <TableCell>{item.pin_code}</TableCell>
+                  <TableCell>{item.address}</TableCell>
+                  <TableCell>{item.created_at}</TableCell>
+                  <TableCell>{item.user_Type}</TableCell>
+                  <TableCell>Active</TableCell>
+
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => {
+                        handleEdit(item.id);
+                      }}
+                    >
+                      Edit
+                    </Button>
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={() => {
+                        handleDelete(item.user_id);
+                      }}
+                    >
+                      Delete
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
       </div>

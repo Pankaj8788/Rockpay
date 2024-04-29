@@ -4,6 +4,8 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import React from "react";
+import Image from "next/image";
+
 import Link from "next/link";
 type prop = {
   item: blogsArrType;
@@ -14,7 +16,13 @@ export default function BlogCard({ item }: any) {
     <section className="w-full main-container flex flex-col items-center justify-center  gap-6 lg:my-12 my-6">
       <div className="w-full flex lg:flex-row flex-col items-center justify-center gap-6 shadow-inner ">
         <div className="w-full lg:w-3/4 h-auto">
-          <img src={item.img.src} alt="img" className="w-full h-full" />
+          <Image
+            src={item.img.src}
+            alt="img"
+            width={500} // Set your desired width
+            height={500}
+            className="w-full h-full"
+          />
         </div>
         <div className="w-full flex flex-col items-start justify-start  lg:gap-0 py-4">
           <h1 className="lg:text-2xl text-black  hover:text-red-600">

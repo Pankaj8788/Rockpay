@@ -1,6 +1,7 @@
 import React from "react";
-import { MainLogo } from "../Assets/navbar";
+import { MainLogo, RockkpayLogo } from "../Assets/navbar";
 import { bharatbill } from "../Assets/navbar";
+import Image from "next/image";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,16 +9,24 @@ import { useRouter } from "next/router";
 export default function MainHeader() {
   const router = useRouter();
   return (
-    <section className="w-full hidden lg:flex items-center justify-between gap-6 main-container h-[6rem] bg-gradient-to-br from-blue-950 to-[#364ADB]">
+    <section className="w-full hidden lg:flex items-center justify-between gap-6 main-container h-[6rem] bg-gradient-to-br from-[#6633CC] to-[#C6BCFF]">
       <div className="w-[30%] flex">
         <Link href={"/"}>
-          <img src={MainLogo.src} alt="" className="w-22 h-20 " />
+          <Image
+            src={RockkpayLogo.src}
+            alt="logo"
+            width={90} // Adjust width as needed
+            height={90}
+            className="w-22 h-20 rounded-full "
+          />
         </Link>
         <Link href={"/"}>
-          <img
+          <Image
             src={bharatbill.src}
             alt=""
-            className="w-17 h-20 bg-white ml-4"
+            width={150} // Adjust width as needed
+            height={190}
+            className="w-17 h-18 bg-white ml-4 mt-4"
           />
         </Link>
       </div>

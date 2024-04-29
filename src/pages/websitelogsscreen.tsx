@@ -9,7 +9,7 @@ const data = {
   subTitle: "Website Logs",
   message: "Hello,Admin",
 };
-export default function () {
+export default function websitelogsscreen() {
   return (
     <MainLayout>
       <AdminHeader data={data} />

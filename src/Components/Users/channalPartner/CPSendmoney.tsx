@@ -2,35 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { TextField } from "@mui/material";
 const CPSendmoney = () => {
-  //   const [formData, setFormData] = useState({
-  //     senderId: "2",
-  //     receiverId: "",
-  //     amount: "",
-  //   });
-  //   const [message, setMessage] = useState("");
-  //   const handleInputChange = (e: any) => {
-  //     setFormData({ ...formData, [e.target.name]: e.target.value });
-  //   };
-  //   const handleSubmit = async (e: any) => {
-  //     e.preventDefault();
-  //     try {
-  //       const token = localStorage.getItem("jwt");
-
-  //       const response = await axios.post(
-  //         "http://localhost:8080/api/transfer",
-  //         formData,
-  //         {
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             Authorization: token,
-  //           },
-  //         }
-  //       );
-  //       setMessage(response.data.message);
-  //     } catch (error) {
-  //       setMessage("Error transferring funds");
-  //     }
-  //   };
   const [formData, setFormData] = useState({
     senderId: "2",
     receiverId: "",
@@ -39,17 +10,6 @@ const CPSendmoney = () => {
   });
   const [userTypes, setUserTypes] = useState([]); // State for storing user types
   const [message, setMessage] = useState("");
-  // useEffect(() => {
-  //   async function fetchUserTypes() {
-  //     try {
-  //       const response = await axios.get("http://localhost:8080/api/usertype");
-  //       setUserTypes(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching user types:", error);
-  //     }
-  //   }
-  //   fetchUserTypes();
-  // }, []);
 
   const [data, setData] = useState<any>();
 
@@ -61,12 +21,9 @@ const CPSendmoney = () => {
           "Content-Type": "application/json",
           Authorization: token,
         };
-        const response = await axios.get(
-          "http://api.ipaisa.site/api/usertype",
-          {
-            headers: headers,
-          }
-        );
+        const response = await axios.get("http://localhost:5000/api/usertype", {
+          headers: headers,
+        });
         // setData(response.data);
         setUserTypes(response.data);
         console.log(data);
@@ -76,7 +33,7 @@ const CPSendmoney = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array to ensure the effect runs only once
+  }, [data]); // Empty dependency array to ensure the effect runs only once
 
   console.log(data);
   const handleInputChange = (e: any) => {
@@ -105,16 +62,6 @@ const CPSendmoney = () => {
     <div className="gap-6 main-container">
       <h2 className="text-xl font-bold">Fund Transfer</h2>
       <form onSubmit={handleSubmit} className="gap-6">
-        {/* <div>
-          <label>Sender ID:</label>
-          <input
-            type="text"
-            name="senderId"
-            value={formData.senderId}
-            onChange={handleInputChange}
-            className="w-2/3  mb-2 mt-2"
-          />
-        </div> */}
         <div>
           <label>Receiver ID:</label>
           <input
@@ -162,17 +109,6 @@ const CPSendmoney = () => {
         >
           Transfer Funds
         </button>
-
-        {/* <div className="w-1/4 h-[70%] flex items-center justify-between gap-4 mt-8">
-          <div className="w-full h-full rounded-3xl bg-gradient-to-r from-[#C420ED] to-[#6C45BF] shadow-[0_10px_20px_rgba(00,00,00)] flex flex-col items-center justify-center gap-6">
-            <h1 className="text-2xl font-bold capitalize text-white ">
-              Wallet Balance
-            </h1>
-            <h1 className="text-2xl font-bold capitalize text-white ">
-              {data?.vmbalance} &#x20B9;
-            </h1>
-          </div>
-        </div> */}
       </form>
       {message && <p>{message}</p>}
     </div>

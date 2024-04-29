@@ -1,9 +1,3 @@
-// import React from "react";
-
-// export default function AdminCpList() {
-//   return <div>AdminCpList</div>;
-// }
-
 import React, { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
 import {
@@ -94,10 +88,10 @@ export default function AdminCpList() {
   };
 
   return (
-    <section className="main container w-full flex flex-col !gap-6 my-8 h-[calc(100vh-9rem)]">
+    <section className=" w-full flex flex-col !gap-6 my-8 h-[calc(100vh-9rem)]">
       <div className="w-full flex justify-start items-center gap-12">
         <div className=" h-32 ">
-          <p className="items-start mb-5 font-semibold text-sm">User name</p>
+          <p className="items-start mb-5 font-semibold text-md">User name</p>
           <TextField
             type="text"
             className="w-72 bg-white ml-6"
@@ -159,12 +153,12 @@ export default function AdminCpList() {
       </div>
 
       <div className="">
-        <p className="text-black font-bold">Registered Channal Partner</p>
+        <p className="text-black font-bold">Registered Channel Partner</p>
       </div>
 
       <div className="w-full flex flex-col items-start justify-start mt-8">
         <TableContainer component={Paper}>
-          <Table aria-label="Registered Channal partner">
+          <Table aria-label="Registered Channel partner">
             <TableHead>
               <TableRow>
                 <TableCell>Sl No.</TableCell>
@@ -175,9 +169,9 @@ export default function AdminCpList() {
                 <TableCell>Adhar number</TableCell>
                 <TableCell>Gstin</TableCell>
                 <TableCell>Date Of Birth</TableCell>
-                <TableCell>Pancard Number</TableCell>
-                <TableCell>Bank Account Number</TableCell>
-                <TableCell>IFSC</TableCell>
+                {/* <TableCell>Pancard Number</TableCell> */}
+                {/* <TableCell>Bank Account Number</TableCell> */}
+                {/* <TableCell>IFSC</TableCell> */}
                 <TableCell>Email</TableCell>
                 <TableCell>Mobile Number</TableCell>
                 <TableCell>Alternate Number</TableCell>
@@ -192,60 +186,61 @@ export default function AdminCpList() {
                 <TableCell>Action</TableCell>
               </TableRow>
             </TableHead>
-            {data.map((item: any, index: number) => (
-              <TableBody>
-                <TableCell>{index + 1}</TableCell>
-                <TableCell>{item.user_id}</TableCell>
-                <TableCell>{item.parent_id}</TableCell>
+            <TableBody>
+              {data.map((item: any, index: number) => (
+                <TableRow key={item.id}>
+                  <TableCell>{index + 1}</TableCell>
+                  <TableCell>{item.user_id}</TableCell>
+                  <TableCell>{item.parent_id}</TableCell>
 
-                <TableCell>
-                  {" "}
-                  {item.name + " " + item.middle_name + " " + item.last_name}
-                </TableCell>
-                <TableCell>{item.outlet_name}</TableCell>
-                <TableCell>{item.aadharcard_number}</TableCell>
-                <TableCell>{item.gstin}</TableCell>
-                <TableCell>{item.date_of_birth}</TableCell>
-                <TableCell>{item.pancard_number}</TableCell>
-                <TableCell>{item.bank_account_number}</TableCell>
-                <TableCell>{item.ifsc}</TableCell>
-                <TableCell>{item.email}</TableCell>
-                <TableCell>{item.mobile_number}</TableCell>
-                <TableCell>{item.alternate_number}</TableCell>
-                <TableCell>{item.state}</TableCell>
-                <TableCell>{item.district}</TableCell>
-                <TableCell>{item.city}</TableCell>
-                <TableCell>{item.pin_code}</TableCell>
-                <TableCell>{item.address}</TableCell>
-                <TableCell>{item.created_at}</TableCell>
-                <TableCell>{item.user_Type}</TableCell>
-                <TableCell>Active</TableCell>
+                  <TableCell>
+                    {" "}
+                    {item.name + " " + item.middle_name + " " + item.last_name}
+                  </TableCell>
+                  <TableCell>{item.outlet_name}</TableCell>
+                  <TableCell>{item.aadharcard_number}</TableCell>
+                  <TableCell>{item.gstin}</TableCell>
+                  <TableCell>{item.date_of_birth}</TableCell>
+                  {/* <TableCell>{item.pancard_number}</TableCell> */}
+                  {/* <TableCell>{item.bank_account_number}</TableCell> */}
+                  {/* <TableCell>{item.ifsc}</TableCell> */}
+                  <TableCell>{item.email}</TableCell>
+                  <TableCell>{item.mobile_number}</TableCell>
+                  <TableCell>{item.alternate_number}</TableCell>
+                  <TableCell>{item.state}</TableCell>
+                  <TableCell>{item.district}</TableCell>
+                  <TableCell>{item.city}</TableCell>
+                  <TableCell>{item.pin_code}</TableCell>
+                  <TableCell>{item.address}</TableCell>
+                  <TableCell>{item.created_at}</TableCell>
+                  <TableCell>{item.user_Type}</TableCell>
+                  <TableCell>Active</TableCell>
 
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => {
-                      handleEdit(item.id);
-                    }}
-                  >
-                    Edit
-                  </Button>
-                </TableCell>
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    onClick={() => {
-                      // handleDelete(item.id);
-                      handleDelete(item.user_id);
-                    }}
-                  >
-                    Delete
-                  </Button>
-                </TableCell>
-              </TableBody>
-            ))}
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => {
+                        handleEdit(item.id);
+                      }}
+                    >
+                      Edit
+                    </Button>
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={() => {
+                        handleDelete(item.user_id);
+                      }}
+                    >
+                      Delete
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
       </div>

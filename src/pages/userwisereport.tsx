@@ -9,7 +9,7 @@ const data = {
   subTitle: "User Wise Report",
   message: "Hello,Admin",
 };
-export default function () {
+export default function userwisereport() {
   return (
     <MainLayout>
       <AdminHeader data={data} />

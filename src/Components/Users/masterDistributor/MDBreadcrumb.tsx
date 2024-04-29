@@ -1,6 +1,7 @@
 import { adminImg } from "@/src/Assets/admin";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function MDBreadcrumb() {
   const [data, setData] = useState<any>();
@@ -30,7 +31,7 @@ export default function MDBreadcrumb() {
     };
 
     fetchData();
-  }, []);
+  }, [data]);
   return (
     <section className="w-full main-container h-full flex flex-col items-start justify-start gap-4 mb-8">
       <div className="w-full h-[70%] flex items-center justify-between gap-4 ">
@@ -42,25 +43,15 @@ export default function MDBreadcrumb() {
             {data?.balance} &#x20B9;
           </h1>
         </div>
-        {/* <div className="w-full h-full rounded-3xl bg-gradient-to-r from-[#C420ED] to-[#6C45BF] shadow-[0_10px_20px_rgba(00,00,00)] flex flex-col items-center justify-center gap-6">
-          <h1 className="text-2xl font-bold capitalize text-white ">
-            Wallet Balance
-          </h1>
-          <h1 className="text-2xl font-bold capitalize text-white ">
-            {data1?.vwbalance} &#x20B9;
-          </h1>
-        </div> */}
-        {/* <div className="w-full h-full rounded-3xl bg-gradient-to-r from-[#208BED] to-[#6C45BF] shadow-[0_10px_20px_rgba(00,00,00)] flex flex-col items-center justify-center gap-6">
-          <h1 className="text-2xl font-bold capitalize text-white ">
-            circulation amount
-          </h1>
-          <h1 className="text-2xl font-bold capitalize text-white ">
-            7000000000/-
-          </h1>
-        </div> */}
       </div>
       <div className="w-full h-full rounded-3xl overflow-hidden shadow-[0_10px_20px_rgba(00,00,00)]">
-        <img src={adminImg.src} alt="" className="w-full h-full object-fill" />
+        <Image
+          src={adminImg.src}
+          alt=""
+          width={500}
+          height={500}
+          className="w-full h-full object-fill"
+        />
       </div>
     </section>
   );

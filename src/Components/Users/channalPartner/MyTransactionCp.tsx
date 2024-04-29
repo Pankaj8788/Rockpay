@@ -1,11 +1,3 @@
-// import React from 'react'
-
-// export default function MyTransactionCp() {
-//   return (
-//     <div>MyTransactionCp</div>
-//   )
-// }
-
 import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
@@ -22,7 +14,7 @@ export default function MyTransactionCp() {
       let apiUrl = "";
       if (transactionType === "wallet") {
         // apiUrl = `http://localhost:5000/api/ftrans?startDate=${fromDate}&endDate=${toDate}`;
-        apiUrl = `http://api.ipaisa.site/api/protected/my-transactions`;
+        apiUrl = `http://localhost:5000/api/protected/my-transactions`;
       } else if (transactionType === "transactions") {
         // apiUrl = `http://localhost:5000/api/protected/adminalltransactions`;
       }

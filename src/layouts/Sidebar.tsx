@@ -8,6 +8,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { logout } from "../redux/actions/authActions";
+import Image from "next/image";
 import axios from "axios";
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -61,7 +62,13 @@ export default function Sidebar() {
         />
       )}
       <div className="w-full center ">
-        <img src={RockkpayLogo.src} alt="" className="w-28 h-28 rounded-full" />
+        <Image
+          src={RockkpayLogo.src}
+          alt=""
+          width={112}
+          height={112}
+          className="w-28 h-28 rounded-full"
+        />
       </div>
       <div className="w-full p-4 flex flex-col items-start justify-start gap-2">
         {data.map((item: any, index: number) => (

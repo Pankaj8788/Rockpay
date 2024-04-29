@@ -1,5 +1,6 @@
 import { aboutTeamArrType } from "@/src/types";
 import React from "react";
+import Image from "next/image";
 type prop = {
   item: aboutTeamArrType;
 };
@@ -8,9 +9,11 @@ export default function OurteamCard({ item }: prop) {
     <section className="flex flex-col items-center justify-center gap-6 w-full">
       <section className="w-full flex items-center justify-between  h-40 ">
         <div className="w-full bg-slate-800 h-full  rounded-full z-50 -mr-10 ml-10 overflow-hidden">
-          <img
+          <Image
             src={item.img.src}
             alt=""
+            width={160} // Set your desired width
+            height={160} // Set your desired height
             className="w-full f-full object-cover"
           />
         </div>

@@ -1,12 +1,24 @@
 import React from "react";
 import { Imockupways2, gplay } from "@/src/Assets/home";
-
+import Image from "next/image";
 export default function QuickWaysSection() {
   return (
     <section className="w-full main-container flex flex-col-reverse md:flex-row items-center justify-between gap-6 my-12">
       <div className="w-full item-center justify-start">
-        <img src={Imockupways2.src} alt="" className="h-[35em] w-auto " />
-        <img src={gplay.src} alt="" className="h-16 w-auto" />
+        <Image
+          src={Imockupways2.src}
+          alt=""
+          height={500}
+          width={500}
+          className="h-[35em] w-auto "
+        />
+        <Image
+          src={gplay.src}
+          alt=""
+          height={64}
+          width={196}
+          className="h-16 w-auto"
+        />
       </div>
 
       <div className="flex flex-col items-start justify-end  w-full">

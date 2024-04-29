@@ -9,7 +9,7 @@ const data = {
   subTitle: "User Cashback Report",
   message: "Hello,Admin",
 };
-export default function () {
+export default function usercashback() {
   return (
     <MainLayout>
       <AdminHeader data={data} />

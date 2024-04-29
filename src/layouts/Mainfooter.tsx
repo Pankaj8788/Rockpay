@@ -1,22 +1,34 @@
 import React from "react";
-import { MainLogo, gplay } from "../Assets/navbar";
+import { MainLogo, RockkpayLogo, gplay } from "../Assets/navbar";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Mainfooter() {
   return (
-    <section className="w-full main-container bg-gradient-to-br from-blue-950 to-[#364ADB] ">
+    <section className="w-full main-container bg-gradient-to-br from-[#6633CC] to-[#C6BCFF] ">
       <section className="w-full  flex flex-col items-start justify-start gap-6  p-5 !text-white">
         <div className="w-full flex items-center justify-between  ">
-          <img src={MainLogo.src} alt="" className="w-20 h-20" />
-          <img src={gplay.src} alt="" className="h-16 w-auto" />
+          <Image
+            src={RockkpayLogo.src}
+            alt=""
+            width={90} // Adjust width as needed
+            height={90}
+            className="w-20 h-20 rounded-full"
+          />
+          <Image
+            src={gplay.src}
+            alt="Google Play Logo"
+            width={120}
+            height={40}
+          />
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="w-full flex flex-col items-start justify-start gap-4 ">
-            <p className="text-lg font-bold text-white">iPaisa</p>
+            <p className="text-lg font-bold text-white">RockkPay</p>
             <p className="text-white font-semibold">
               <b className="font-bold">Address</b>: 2nd Floor, Golden Empire,
               near Croma - Baner, Rajyog Cooperative Housing Society, Veerbhadra
@@ -46,13 +58,13 @@ export default function Mainfooter() {
           <div className="w-full flex flex-col items-start justify-start gap-4">
             <p className="text-lg font-bold text-white">Socials</p>
             <span className="flex gap-2">
-              <Link href={"https://www.google.com/"} target="_blank">
+              <Link href={"https://edsomfintech.com/"} target="_blank">
                 <InstagramIcon className="cursor-pointer h-10 w-10 !text-red-500 !text-5xl !transition-all !duration-400 !ease-in-out hover:scale-105 active:scale-95" />
               </Link>
-              <Link href={"https://www.google.com/"} target="_blank">
+              <Link href={"https://edsomfintech.com/"} target="_blank">
                 <LinkedInIcon className="cursor-pointer h-10 w-10 !text-5xl !transition-all !duration-400 !ease-in-out hover:scale-105 active:scale-95" />
               </Link>
-              <Link href={"https://www.google.com/"} target="_blank">
+              <Link href={"https://edsomfintech.com/"} target="_blank">
                 <XIcon className="cursor-pointer h-10 w-10 !text-5xl !transition-all !duration-400 !ease-in-out hover:scale-105 active:scale-95" />
               </Link>
               <Link

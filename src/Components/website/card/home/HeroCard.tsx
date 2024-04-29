@@ -1,6 +1,8 @@
 import { imockup1 } from "@/src/Assets/home";
 import { heroArrType } from "@/src/types";
 import React from "react";
+import Image from "next/image";
+
 type prop = {
   item: heroArrType;
 };
@@ -15,7 +17,12 @@ export default function HeroCard({ item }: prop) {
         <p className="text-xl text-white text-center">{item.title}</p>
         <p className="text-xl text-white text-center">{item.subTitle}</p>
       </span>
-      <img src={item.img.src} alt="" />
+      <Image
+        src={item.img.src}
+        alt=""
+        width={300} // Set your desired width
+        height={200}
+      />
     </div>
   );
 }

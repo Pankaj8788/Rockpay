@@ -1,6 +1,8 @@
 import React from "react";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { footbalimg } from "@/src/Assets/home";
+import Image from "next/image";
+
 export default function NewsLetter() {
   return (
     <section className="flex flex-col main-container items-center justify-center gap-10 my-12  ">
@@ -29,9 +31,11 @@ export default function NewsLetter() {
           </span>
         </div>
         <div className="w-full center  ">
-          <img
+          <Image
             src={footbalimg.src}
             alt=""
+            width={400} // Adjust width as needed
+            height={300} // Adjust height as needed
             className="group-hover:scale-150 !transition-all !duration-700 !ease-in-out"
           />
         </div>

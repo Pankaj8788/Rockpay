@@ -1,5 +1,6 @@
 import { servicesUtility } from "@/src/Assets/services";
 import React from "react";
+import Image from "next/image";
 
 export default function UtilityServices() {
   return (
@@ -18,9 +19,11 @@ export default function UtilityServices() {
         </p>
       </div>
       <div className="w-full flex items-center justify-end mt-14 ml-8">
-        <img
+        <Image
           src={servicesUtility.src}
           alt=""
+          width={500} // Adjust width as needed
+          height={350} // Adjust height as needed
           className="h-[35em] w-auto  !duration-500 !ease-in-out hover:scale-105 active:scale-95"
         />
       </div>

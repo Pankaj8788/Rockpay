@@ -88,7 +88,7 @@ export default function Refund_2() {
         </button>
       </div>
 
-      <div>
+      {/* <div>
         <p className="font-bold text-sm capitalize">Apply Bulk Action:</p>
         <span>
           <select
@@ -102,7 +102,7 @@ export default function Refund_2() {
             Go
           </button>
         </span>
-      </div>
+      </div> */}
     </section>
   );
 }

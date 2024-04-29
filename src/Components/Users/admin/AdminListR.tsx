@@ -1,9 +1,3 @@
-// import React from "react";
-
-// export default function AdminListR() {
-//   return <div>AdminListR</div>;
-// }
-
 import React, { useEffect, useState } from "react";
 import { TextField } from "@mui/material";
 import {
@@ -21,82 +15,6 @@ import Swal from "sweetalert2";
 
 export default function AdminListR() {
   const [data, setData] = useState<any>([]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const token = localStorage.getItem("jwt");
-  //       const headers = {
-  //         "Content-Type": "application/json",
-  //         Authorization: token,
-  //       };
-  //       let apiUrl = ""; // Initialize apiUrl variable
-
-  //       // Check user role to determine API endpoint
-  //       const userRole = localStorage.getItem("navData");
-  //       if (userRole === "Admin") {
-  //         apiUrl = "http://localhost:5000/api/auth/admincps";
-  //       } else {
-  //         apiUrl = "http://localhost:5000/api/auth/adminusers";
-  //       }
-
-  //       const response = await axios.get(apiUrl, {
-  //         headers: headers,
-  //       });
-  //       setData(response.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-  // const handleDelete = async (itemId: any) => {
-  //   try {
-  //     const token = localStorage.getItem("jwt");
-  //     const headers = {
-  //       "Content-Type": "application/json",
-  //       Authorization: token,
-  //     };
-  //     await axios.delete(
-  //       `http://localhost:8080/api/deleteMasterDistributor/${itemId}`,
-  //       {
-  //         headers: headers,
-  //       }
-  //     );
-  //     console.log("Item deleted successfully");
-  //   } catch (error) {
-  //     console.error("Error deleting item:", error);
-  //   }
-  //   Swal.fire({
-  //     icon: "success",
-  //     title: "Success!",
-  //     text: "Item deleted successfully",
-  //   });
-  // };
-  // const handleEdit = async (itemId: any) => {
-  //   try {
-  //     const token = localStorage.getItem("jwt");
-  //     const headers = {
-  //       "Content-Type": "application/json",
-  //       Authorization: token,
-  //     };
-  //     await axios.put(
-  //       `http://localhost:5000/api/update/channelpartner/${itemId}`,
-  //       {
-  //         headers: headers,
-  //       }
-  //     );
-  //     console.log("Item updated successfully");
-  //   } catch (error) {
-  //     console.error("Error updating item:", error);
-  //   }
-  //   Swal.fire({
-  //     icon: "success",
-  //     title: "Success!",
-  //     text: "Item updated successfully",
-  //   });
-  // };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -154,7 +72,7 @@ export default function AdminListR() {
         Authorization: token,
       };
       await axios.put(
-        `http://localhost:8080/api/update/channelpartner/${itemId}`,
+        `http://localhost:5000/api/update/channelpartner/${itemId}`,
         {
           headers: headers,
         }
@@ -241,7 +159,7 @@ export default function AdminListR() {
 
       <div className="w-full flex flex-col items-start justify-start mt-8">
         <TableContainer component={Paper}>
-          <Table aria-label="Registered Channal partner">
+          <Table aria-label="Registered Channel partner">
             <TableHead>
               <TableRow>
                 <TableCell>Sl No.</TableCell>
@@ -252,9 +170,9 @@ export default function AdminListR() {
                 <TableCell>Adhar number</TableCell>
                 <TableCell>Gstin</TableCell>
                 <TableCell>Date Of Birth</TableCell>
-                <TableCell>Pancard Number</TableCell>
-                <TableCell>Bank Account Number</TableCell>
-                <TableCell>IFSC</TableCell>
+                {/* <TableCell>Pancard Number</TableCell> */}
+                {/* <TableCell>Bank Account Number</TableCell> */}
+                {/* <TableCell>IFSC</TableCell> */}
                 <TableCell>Email</TableCell>
                 <TableCell>Mobile Number</TableCell>
                 <TableCell>Alternate Number</TableCell>
@@ -269,60 +187,61 @@ export default function AdminListR() {
                 <TableCell>Action</TableCell>
               </TableRow>
             </TableHead>
-            {data.map((item: any, index: number) => (
-              <TableBody>
-                <TableCell>{index + 1}</TableCell>
-                <TableCell>{item.user_id}</TableCell>
-                <TableCell>{item.parent_id}</TableCell>
+            <TableBody>
+              {data.map((item: any, index: number) => (
+                <TableRow key={item.id}>
+                  <TableCell>{index + 1}</TableCell>
+                  <TableCell>{item.user_id}</TableCell>
+                  <TableCell>{item.parent_id}</TableCell>
 
-                <TableCell>
-                  {" "}
-                  {item.name + " " + item.middle_name + " " + item.last_name}
-                </TableCell>
-                <TableCell>{item.outlet_name}</TableCell>
-                <TableCell>{item.aadharcard_number}</TableCell>
-                <TableCell>{item.gstin}</TableCell>
-                <TableCell>{item.date_of_birth}</TableCell>
-                <TableCell>{item.pancard_number}</TableCell>
-                <TableCell>{item.bank_account_number}</TableCell>
-                <TableCell>{item.ifsc}</TableCell>
-                <TableCell>{item.email}</TableCell>
-                <TableCell>{item.mobile_number}</TableCell>
-                <TableCell>{item.alternate_number}</TableCell>
-                <TableCell>{item.state}</TableCell>
-                <TableCell>{item.district}</TableCell>
-                <TableCell>{item.city}</TableCell>
-                <TableCell>{item.pin_code}</TableCell>
-                <TableCell>{item.address}</TableCell>
-                <TableCell>{item.created_at}</TableCell>
-                <TableCell>{item.user_Type}</TableCell>
-                <TableCell>Active</TableCell>
+                  <TableCell>
+                    {" "}
+                    {item.name + " " + item.middle_name + " " + item.last_name}
+                  </TableCell>
+                  <TableCell>{item.outlet_name}</TableCell>
+                  <TableCell>{item.aadharcard_number}</TableCell>
+                  <TableCell>{item.gstin}</TableCell>
+                  <TableCell>{item.date_of_birth}</TableCell>
+                  {/* <TableCell>{item.pancard_number}</TableCell> */}
+                  {/* <TableCell>{item.bank_account_number}</TableCell> */}
+                  {/* <TableCell>{item.ifsc}</TableCell> */}
+                  <TableCell>{item.email}</TableCell>
+                  <TableCell>{item.mobile_number}</TableCell>
+                  <TableCell>{item.alternate_number}</TableCell>
+                  <TableCell>{item.state}</TableCell>
+                  <TableCell>{item.district}</TableCell>
+                  <TableCell>{item.city}</TableCell>
+                  <TableCell>{item.pin_code}</TableCell>
+                  <TableCell>{item.address}</TableCell>
+                  <TableCell>{item.created_at}</TableCell>
+                  <TableCell>{item.user_Type}</TableCell>
+                  <TableCell>Active</TableCell>
 
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => {
-                      handleEdit(item.id);
-                    }}
-                  >
-                    Edit
-                  </Button>
-                </TableCell>
-                <TableCell>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    onClick={() => {
-                      // handleDelete(item.id);
-                      handleDelete(item.user_id);
-                    }}
-                  >
-                    Delete
-                  </Button>
-                </TableCell>
-              </TableBody>
-            ))}
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => {
+                        handleEdit(item.id);
+                      }}
+                    >
+                      Edit
+                    </Button>
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={() => {
+                        handleDelete(item.user_id);
+                      }}
+                    >
+                      Delete
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
       </div>
