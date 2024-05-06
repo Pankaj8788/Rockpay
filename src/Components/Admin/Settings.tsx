@@ -203,11 +203,11 @@ export default function Settings() {
           For more info visit:
           <Link
             className="!text-themeColor"
-            href={" https://www.segment.com"}
+            href={" https:/www.segment.com"}
             target="_blank"
           >
             {" "}
-            https://www.segment.com
+            https:/www.segment.com
           </Link>
         </p>
       </div>
@@ -234,11 +234,11 @@ export default function Settings() {
           For more info visit:
           <Link
             className="!text-themeColor"
-            href={"  https://firebase.google.com/"}
+            href={"  https:/firebase.google.com/"}
             target="_blank"
           >
             {" "}
-            https://firebase.google.com/
+            https:/firebase.google.com/
           </Link>
         </p>
       </div>
@@ -305,11 +305,11 @@ export default function Settings() {
           For more info visit:
           <Link
             className="!text-themeColor"
-            href={"  https://www,tawk.to"}
+            href={"  https:/www,tawk.to"}
             target="_blank"
           >
             {" "}
-            https://www,tawk.to
+            https:/www,tawk.to
           </Link>
         </p>
       </div>

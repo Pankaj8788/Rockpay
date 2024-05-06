@@ -2,6 +2,7 @@ import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import HistoryIcon from "@mui/icons-material/History";
 import { mobilerecharge } from "@/src/Assets/retailer";
+import InstallMobileIcon from "@mui/icons-material/InstallMobile";
 import { TextField } from "@mui/material";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -27,318 +28,321 @@ export default function Rservices() {
           </span>
         </div>
       </section>
-      <section className="main-container w-full md:w-1/2 lg:w-1/2 xl:w-1/2 px-10 py-10 shadow-2xl mb-2">
-        <span>
-          <div className="w-full mt-4 ">
-            <p className="text-white font-bold text-lg">
-              Utilities Payment By BBPS
-            </p>
-          </div>
-          Recharge Payment
-          <div className="flex">
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Mobile </p>
-                <p className="text-white font-semibold"> Recharge</p>
-              </div>
+      <section className="flex ">
+        <div className="main-container w-full md:w-1/2 lg:w-1/2 xl:w-1/2 px-10 py-10 shadow-2xl mb-2 bg-[#2e33a8] mt-4 ml-2 rounded-md ">
+          <span>
+            <div className="w-full mt-4 ">
+              <p className="text-white font-bold text-lg">
+                Utilities Payment By BBPS
+              </p>
             </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col ">
-                <p className="text-white font-semibold ml-2">DTH</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">FASTag </p>
-                <p className="text-white font-semibold"> Recharge</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
+            <p className="text-white"> Recharge Payment</p>
+
+            <div className="flex">
               <div
-                className="ml-2 flex flex-col"
+                className="w-full mt-4 flex flex-col items-start justify-start"
                 onClick={() => {
-                  router.push("/retailercreditcard");
+                  router.push("/retailerrecharge");
                 }}
               >
-                <p className="text-white font-semibold">Credit Card</p>
+                <div className="rounded-full bg-[#100335] w-12 h-12 flex items-center justify-center">
+                  <InstallMobileIcon className="h-5 w-5 text-white" />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Mobile </p>
+                  <p className="text-white font-semibold"> Recharge</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col ">
+                  <p className="text-white font-semibold ml-2">DTH</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">FASTag </p>
+                  <p className="text-white font-semibold"> Recharge</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div
+                  className="ml-2 flex flex-col"
+                  onClick={() => {
+                    router.push("/retailercreditcard");
+                  }}
+                >
+                  <p className="text-white font-semibold">Credit Card</p>
+                </div>
               </div>
             </div>
-          </div>
-          {/* Utilities payment */}
-          <div className="w-full mt-4 ">
-            <p className="text-white font-bold text-lg">Utilities Payment</p>
-          </div>
-          <div className="flex">
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
+            {/* Utilities payment */}
+            <div className="w-full mt-4 ">
+              <p className="text-white font-bold text-lg">Utilities Payment</p>
+            </div>
+            <div className="flex">
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Mobile </p>
+                  <p className="text-white font-semibold">Postpaid</p>
+                </div>
               </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Mobile </p>
-                <p className="text-white font-semibold">Postpaid</p>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col ">
+                  <p className="text-white font-semibold ml-2">Electricity</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Water </p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Book a</p>
+                  <p className="text-white font-semibold"> Cyclinder</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Broadband</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Landline </p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Rent</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Piped </p>
+                  <p className="text-white font-semibold ml-2">Gas</p>
+                </div>
               </div>
             </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
+            {/* Financial Services */}
+            <div className="w-full mt-4 ">
+              <p className="text-white font-bold text-lg">Financial Services</p>
+            </div>
+            <div className="flex">
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Mobile </p>
+                  <p className="text-white font-semibold"> Recharge</p>
+                </div>
               </div>
-              <div className="ml-2 flex flex-col ">
-                <p className="text-white font-semibold ml-2">Electricity</p>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col ">
+                  <p className="text-white font-semibold ml-2">DTH</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">FASTag </p>
+                  <p className="text-white font-semibold"> Recharge</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-2 flex flex-col">
+                  <p className="text-white font-semibold">Credit </p>
+                  <p className="text-white font-semibold ml-2">Card</p>
+                </div>
               </div>
             </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
+            {/* Other Services */}
+            <div className="w-full mt-4 ">
+              <p className="text-white font-bold text-lg">Financial Services</p>
+            </div>
+            <div className="flex">
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-1 flex flex-col">
+                  {" "}
+                  {/* Decreased margin */}
+                  <p className="text-white font-semibold">Mobile </p>
+                  <p className="text-white font-semibold"> Recharge</p>
+                </div>
               </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Water </p>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-1 flex flex-col ">
+                  <p className="text-white font-semibold ml-2">DTH</p>
+                </div>
+              </div>
+              <div className="w-full mt-4 flex flex-col items-start justify-start">
+                <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={mobilerecharge.src}
+                    alt="Icon"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 bg-white"
+                  />
+                </div>
+                <div className="ml-1 flex flex-col">
+                  <p className="text-white font-semibold">FASTag </p>
+                  <p className="text-white font-semibold"> Recharge</p>
+                </div>
               </div>
             </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Book a</p>
-                <p className="text-white font-semibold"> Cyclinder</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Broadband</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Landline </p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Rent</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Piped </p>
-                <p className="text-white font-semibold ml-2">Gas</p>
-              </div>
-            </div>
-          </div>
-          {/* Financial Services */}
-          <div className="w-full mt-4 ">
-            <p className="text-white font-bold text-lg">Financial Services</p>
-          </div>
-          <div className="flex">
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Mobile </p>
-                <p className="text-white font-semibold"> Recharge</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col ">
-                <p className="text-white font-semibold ml-2">DTH</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">FASTag </p>
-                <p className="text-white font-semibold"> Recharge</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-2 flex flex-col">
-                <p className="text-white font-semibold">Credit </p>
-                <p className="text-white font-semibold ml-2">Card</p>
-              </div>
-            </div>
-          </div>
-          {/* Other Services */}
-          <div className="w-full mt-4 ">
-            <p className="text-white font-bold text-lg">Financial Services</p>
-          </div>
-          <div className="flex">
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-1 flex flex-col">
-                {" "}
-                {/* Decreased margin */}
-                <p className="text-white font-semibold">Mobile </p>
-                <p className="text-white font-semibold"> Recharge</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-1 flex flex-col ">
-                <p className="text-white font-semibold ml-2">DTH</p>
-              </div>
-            </div>
-            <div className="w-full mt-4 flex flex-col items-start justify-start">
-              <div className="rounded-full bg-[#100335] w-16 h-16 flex items-center justify-center">
-                <Image
-                  src={mobilerecharge.src}
-                  alt="Icon"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 bg-white"
-                />
-              </div>
-              <div className="ml-1 flex flex-col">
-                <p className="text-white font-semibold">FASTag </p>
-                <p className="text-white font-semibold"> Recharge</p>
-              </div>
-            </div>
-          </div>
-        </span>
+          </span>
+        </div>
+        <div className="main-container w-full md:w-1/2 lg:w-1/2 xl:w-1/2 px-10 py-10 shadow-2xl mb-2 "></div>
       </section>
     </section>
   );

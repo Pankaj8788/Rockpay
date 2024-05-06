@@ -106,7 +106,7 @@ export default function CircleMasterScreen() {
           Refer
           <Link
             className="!text-themeColor"
-            href={" https://www.coai.com/msc-codes"}
+            href={" https:/www.coai.com/msc-codes"}
             target="_blank"
           >
             {" "}

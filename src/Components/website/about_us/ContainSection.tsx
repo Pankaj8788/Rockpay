@@ -12,10 +12,10 @@ export default function ContainSection() {
           </h2>
           <div>
             <p className="text-xl lg:text-1xl font-semibold text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua..
+              Empowering everyone with a simpler, more accessible financial
+              future. We leverage technology to provide seamless payments,
+              investments, and insurance, putting financial control at your
+              fingertips.
             </p>
           </div>
         </div>
@@ -37,10 +37,9 @@ export default function ContainSection() {
           </h2>
           <div>
             <p className="text-xl lg:text-1xl font-semibold text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua..
+              A world where finance is accessible to everyone. We envision a
+              future where technology simplifies financial services, empowering
+              individuals to achieve their goals with confidence.
             </p>
           </div>
         </div>

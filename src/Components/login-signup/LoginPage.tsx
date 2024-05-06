@@ -1,4 +1,4 @@
-import { MainLogo } from "@/src/Assets/navbar";
+import { MainLogo, RockkpayLogo } from "@/src/Assets/navbar";
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import { Login_bg, breadcrumimg, desktopscreen } from "@/src/Assets/login";
@@ -79,7 +79,7 @@ export const LoginPage = () => {
         <div className="w-full h-full flex flex-col item-start justify-start gap-10">
           <span className="w-full">
             <p className="w-full text-center text-white text-4xl">
-              Ipaisa-One Time Solution
+              RockkPay-One Time Solution
             </p>
             <p className="w-full text-center text-white text-4xl mt-4">
               For All Your Payments
@@ -94,7 +94,7 @@ export const LoginPage = () => {
           />
         </div>
         <div className="w-full h-full center">
-          <div className="h-[70vh] w-1/2 bg-[#0075ff] bg-opacity-25 rounded-3xl flex flex-col items-start justify-start gap-4 p-4">
+          <div className="h-[70vh] w-1/2 bg-gradient-to-br from-[#6633CC] to-[#C6BCFF] bg-opacity-25 rounded-3xl flex flex-col items-start justify-start gap-4 p-4">
             <div className="w-full flex items-center justify-between">
               <span className="w-full">
                 <p className="w-full capitalize text-white text-lg font-bold">
@@ -106,7 +106,7 @@ export const LoginPage = () => {
               </span>
               <span className="w-full flex justify-end">
                 <Image
-                  src={MainLogo.src}
+                  src={RockkpayLogo.src}
                   alt=""
                   width={800}
                   height={600}

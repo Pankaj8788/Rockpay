@@ -6,6 +6,7 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { menuArrType, sidebarArrType } from "@/src/types";
 // export const sidebarArr: sidebarArrType[] = [
@@ -616,11 +617,11 @@ export const newSideBarArr = [
                 subTitle: "Add retailer",
                 path: "./adminaddr",
               },
-              {
-                id: 453,
-                subTitle: "Retailer Services",
-                path: "./rservices",
-              },
+              // {
+              //   id: 453,
+              //   subTitle: "Retailer Services",
+              //   path: "./rservices",
+              // },
             ],
           },
           {
@@ -1032,11 +1033,11 @@ export const newSideBarArr = [
                 subTitle: "Add retailer",
                 path: "./addretailer",
               },
-              {
-                id: 443,
-                subTitle: "Retailer Services",
-                path: "./rservices",
-              },
+              // {
+              //   id: 443,
+              //   subTitle: "Retailer Services",
+              //   path: "./rservices",
+              // },
             ],
           },
 
@@ -1399,7 +1400,7 @@ export const newSideBarArr = [
               {
                 id: 412,
                 subTitle: "Add master distributor",
-                path: "./addretailer",
+                path: "./addmasterdistributor",
               },
             ],
           },
@@ -1433,11 +1434,11 @@ export const newSideBarArr = [
                 subTitle: "Add retailer",
                 path: "./addretailer",
               },
-              {
-                id: 443,
-                subTitle: "Retailer Services",
-                path: "./rservices",
-              },
+              // {
+              //   id: 443,
+              //   subTitle: "Retailer Services",
+              //   path: "./rservices",
+              // },
             ],
           },
 
@@ -1818,11 +1819,11 @@ export const newSideBarArr = [
                 subTitle: "Add retailer",
                 path: "./addretailer",
               },
-              {
-                id: 423,
-                subTitle: "Retailer Services",
-                path: "./rservices",
-              },
+              // {
+              //   id: 423,
+              //   subTitle: "Retailer Services",
+              //   path: "./rservices",
+              // },
             ],
           },
 
@@ -2187,11 +2188,11 @@ export const newSideBarArr = [
                 subTitle: "Add retailer",
                 path: "./addretailer",
               },
-              {
-                id: 413,
-                subTitle: "Retailer Services",
-                path: "./rservices",
-              },
+              // {
+              //   id: 413,
+              //   subTitle: "Retailer Services",
+              //   path: "./rservices",
+              // },
             ],
           },
 
@@ -2517,69 +2518,69 @@ export const newSideBarArr = [
         icon: <DashboardIcon className="!text-white" />,
         path: "./rbreadcrumb",
       },
-      // {
-      //   id: 2,
-      //   title: "commission",
-      //   icon: <CurrencyExchangeIcon className="!text-white" />,
+      {
+        id: 2,
+        title: "Services",
+        icon: <MiscellaneousServicesIcon className="!text-white" />,
 
-      //   subMenu: [
-      //     {
-      //       id: 21,
-      //       subTitle: "Create package",
-      //       path: "./createpack",
-      //     },
-      //     {
-      //       id: 22,
-      //       subTitle: "Commission packs",
-      //       path: "./commissionpacks",
-      //     },
-      //   ],
-      // },
+        subMenu: [
+          {
+            id: 453,
+            subTitle: "Retailer Services",
+            path: "./rservices",
+          },
+          //     {
+          //       id: 22,
+          //       subTitle: "Commission packs",
+          //       path: "./commissionpacks",
+          //     },
+          //   ],
+          // },
 
-      // {
-      //   id: 4,
-      //   title: "users",
-      //   icon: <SupervisedUserCircleIcon className="!text-white" />,
+          // {
+          //   id: 4,
+          //   title: "users",
+          //   icon: <SupervisedUserCircleIcon className="!text-white" />,
 
-      //   subMenu: [
-      //     // {
-      //     //   id: 46,
-      //     //   subTitle: "Members",
-      //     //   ultraSubMenu: [
-      //     //     {
-      //     //       id: 461,
-      //     //       subTitle: "Members list",
-      //     //       path: "./comingsoon",
-      //     //     },
-      //     //   ],
-      //     // },
-      //     // {
-      //     //   id: 47,
-      //     //   subTitle: "Change parent",
-      //     //   path: "./assignparentuserr",
-      //     // },
-      //     // {
-      //     //   id: 48,
-      //     //   subTitle: "Change mobile number in KYC",
-      //     //   path: "./changemobilenumber",
-      //     // },
-      //     {
-      //       id: 48,
-      //       subTitle: "Retailer Services",
-      //       path: "./rservices",
-      //     },
-      //     {
-      //       id: 49,
-      //       subTitle: "KYC verification",
-      //       path: "./kycverificationn",
-      //     },
-      //     {
-      //       id: 50,
-      //       subTitle: "KYC verified",
-      //       path: "./comingsoon",
-      //     },
-      //   ],
-      // },
+          //   subMenu: [
+          //     // {
+          //     //   id: 46,
+          //     //   subTitle: "Members",
+          //     //   ultraSubMenu: [
+          //     //     {
+          //     //       id: 461,
+          //     //       subTitle: "Members list",
+          //     //       path: "./comingsoon",
+          //     //     },
+          //     //   ],
+          //     // },
+          //     // {
+          //     //   id: 47,
+          //     //   subTitle: "Change parent",
+          //     //   path: "./assignparentuserr",
+          //     // },
+          //     // {
+          //     //   id: 48,
+          //     //   subTitle: "Change mobile number in KYC",
+          //     //   path: "./changemobilenumber",
+          //     // },
+          //     {
+          //       id: 48,
+          //       subTitle: "Retailer Services",
+          //       path: "./rservices",
+          //     },
+          //     {
+          //       id: 49,
+          //       subTitle: "KYC verification",
+          //       path: "./kycverificationn",
+          //     },
+          //     {
+          //       id: 50,
+          //       subTitle: "KYC verified",
+          //       path: "./comingsoon",
+          //     },
+        ],
+      },
       {
         id: 5,
         title: "balance",

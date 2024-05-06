@@ -13,10 +13,10 @@ export default function BreadCrumb() {
           Serve You
         </p>
         <p className="text-xl lg:text-1xl lg:leading-10  font-semibold logoWarper_one">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ab
-          dicta necessitatibus alias nemo rerum amet esse eaque blanditiis sed
-          minus, quia similique officiis illum quas non ducimus quibusdam?
-          Necessitatibus non laudantium, fugiat odio totam quibusdam adipisci.
+          We leverage technology to empower your finances. Manage your money
+          effortlessly with our innovative tools for payments, investments, and
+          more. Experience a faster, simpler, and more accessible financial
+          journey with us.
         </p>
       </div>
       <div className="w-full flex items-center justify-end">

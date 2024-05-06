@@ -20,11 +20,9 @@ export default function InsuaranceServices() {
         </p>
 
         <p className="text-xl lg:text-1xl gap-2 lg:leading-10 font-semibold logoWarper_one">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
-          accusantium optio unde voluptatem. Provident sed ea cum libero nihil
-          tenetur aperiam unde accusantium sit, iusto numquam officia dicta modi
-          culpa iste doloribus quisquam laudantium itaque est reprehenderit
-          eligendi amet molestias!
+          Get the insurance you need, simplified. We leverage tech to offer
+          customized coverage, instant quotes, and seamless claims. Protect your
+          future with a faster, more convenient insurance experience.
         </p>
       </div>
     </section>
